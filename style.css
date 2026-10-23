@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --main-color:#352b07;
+    --black:#13131a;
+    --bg:#cbd9d2;
+    --border:1rem solid rgba(60, 55, 55, 0.3);
+}
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: 65.2%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior:smooth;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vh 7%;
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.header .logo{
+    height: 12vh;
+    width: 12vh;
+    border: 0.2vh solid var(--main-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;  
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.header .navbar a{
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color:#fff;
+}
+.header .navbar a:hover{
+    color:#cfb698;
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+/* home------------------ */
+.home{
+    background-image:url("img/bg1.png");
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height:100vh;
+    align-items: center;
+    display:flex;
+    align-items:center;
+    padding:0 7%;
+    color:white;
+    }
+    /* .home img{
+        height:60vh;
+        margin-left: 30rem;
+    }      */
+    .home img{
+        max-width:100%;
+        height:auto;
+        margin-left:0;
+        margin:2rem auto;
+    }
+    .home .content{
+    max-width:60vh;
+    }  
+    .home .content h1{      
+    font-size:6rem;
+    text-transform:uppercase;
+    }    
+    .home .content p{
+    font-size:2.8rem;
+    font-weight:400;
+    line-height:1.8;
+    padding:1rem 0;
+    }    
+    .btn{
+    /* height: 7vh; */
+    display:inline-block;
+    margin-top:1rem;
+    padding:2rem 3rem;
+    font-size:2.3rem;
+    text-align: center;
+    color:var(--bg);
+    background:var(--main-color);
+    cursor:pointer;
+    border-radius:.5rem;
+    }    
+    .btn:hover{
+    letter-spacing:.5rem;
+    background:#3e3107;
+    }
+    /* menu starts */
+    .menu {
+        min-height: 150vh; 
+        display: block;
+        justify-content: center; 
+        align-items: center;    
+        padding:0.5rem;
+        background-image: url("img/menubg.jpg");
+        background-attachment: fixed;
+        background-position: fixed;
+        background-size: cover;
+        color: #fff;
+        text-align: center;      
+    }
+    .menu .img{
+        height:auto;
+        width:auto;
+        border-radius: 20px;      
+    }
+   .menu .content-menu{
+        width:100%;
+        min-height:100vh;
+        display: block;
+    }
+    .menu .content-menu .row{
+        height: auto;              
+        flex-wrap: wrap;
+        margin-top:5.6vh;
+        padding:0.6vh;
+        display:flex;
+        gap:2vh;             
+        justify-content: space-around;
+        
+    }
+    .menu .content-menu .row .menu-div .name{
+        font-size: 2.5rem;
+    }
+    #r1,#r2{
+       padding:1.6vh ;
+    }
+    .menu-div{
+        flex: 1 1 30vh;            
+        max-width: auto;
+        padding: 2rem;
+        border-radius: 20px;
+        display: block;
+        border:2px solid #fff;
+        background: rgba(37, 4, 4, 0.439);
+        backdrop-filter: 20px;
+    }
+    .menu .h1 {
+        margin-top: 6rem;
+        margin-right: 6rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 6rem;    
+    }
+    .menu img{
+        height:30rem;
+    }
+    .menu-btn{
+        font-size:3rem;
+        color:white;
+        cursor:pointer;
+        display:none;
+    }
+    @media (max-width:768px){
+
+        .menu-btn{
+            display:block;
+        }
+        
+        .navbar{
+            position:absolute;
+            top:100%;
+            left:0;
+            right:0;
+            background:#000;
+            flex-direction:column;
+            display:none;
+        }
+        
+        .navbar.active{
+            display:flex;
+        }
+        
+        }
+    /* about-------------------- */
+    .about{
+        width:100%;
+        min-height: 80vh;
+        background-image: url("img/aboutbg.png"); 
+        background-size: cover;
+        background-position: center;   
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color:#fff;
+        padding: 11rem 2rem;        
+    }     
+        .about .content {
+            max-width: 90rem; 
+            margin: 2vh ;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 4rem;
+            border-radius: 1.5rem;
+            backdrop-filter: blur(5px);
+        }       
+        .about .content h1{       
+        font-size:7rem;
+        text-transform:uppercase;
+        }
+        .about .content h2{
+            font-size: 2.5rem;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 300;
+        }
+        .about .content p{
+        font-size:3rem;
+        font-weight:400;
+        line-height:1.8;
+        padding:1rem 0;
+        }
+        li{
+            list-style: none;
+        }
+        /* Container and Title */
+.table-container {
+    padding: 8rem 7%;
+    background-image:linear-gradient(rgb(216, 203, 187),rgb(220, 136, 113)) ; 
+    text-align: center;
+}
+.table-title {
+    font-size: 4rem;
+    color: var(--main-color); 
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+/* Base Table Styling */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.8rem;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+.menu-table thead tr {
+    background-color: var(--main-color); 
+    color: #ffffff;
+    text-align: center;
+}
+.menu-table th, .menu-table td {
+    padding: 1.5rem 2rem;
+}
+
+
+/* Booking Section Styling */
+.booking-section {
+    padding: 10rem 7%;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("img/bg1.png");
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 80rem;
+    text-align: center;
+    color: #fff;
+}
+
+.booking-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.booking-content p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.booking-form .input-group {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; 
+}
+
+.booking-form input, 
+.booking-form select {
+    flex: 1 1 30rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.booking-form .btn {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    transition: 0.3s ease;
+}
+/* contact */
+ .contact{
+    width:100%;
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f1ee;
+    background-image: url("img/cbg.png");
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 13rem 5%;
+}
+.contact h1{
+   
+    font-size: 5.5rem;
+    color:#ffffff;
+}
+.contact h2{
+    font-size: 3.5rem;
+    color: #e5d492;
+}
+.contact .content{
+    border: 2px solid white;
+    border-radius: 20px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    text-align:center;
+    backdrop-filter:blur(10px) ;
+    width: 800px;
+    padding: 60px;
+}
+.contact-form{
+    margin-top:20px;
+}
+.form-group{
+    margin-bottom:15px;
+}
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    border-radius:6px;
+    border:1px solid #ccc;
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#824417;
+}
+.btn-contact{
+    background:#3c1e09;
+    color:white;
+    border:none;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    padding: 20px 40px; 
+    font-size: 2.2rem;
+    width: 100%;
+}
+.btn-contact:hover{
+    background:#795d34;
+}
+.social-media{
+    margin-bottom:30px;
+}
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:15px;
+}
+.social{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+    background:#f1f1f1;
+    color:#2a1e03;
+    transition:0.3s;
+    font-size:15px;
+}
+.social i{
+    font-size:18px;
+}
+.social:hover{
+    background:#6f4e37;
+    color:white;
+}
+    /* footer */ 
+    .foot-box{
+        color:#fff;
+        width:65rem;
+        margin: 2rem;
+        padding:3rem;
+        display: block;
+        align-items: center;
+    }
+    .footer .logo{
+        height: 10rem;
+        width: 10rem;
+        border: 0.2rem solid var(--main-color);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .footer .logo img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;}
+        
+    /* Footer Container */
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 4rem 7%; 
+        gap: 3rem;
+        max-height: auto;
+    }
+
+/* Individual Footer Columns */
+.foot-box {
+    flex: 1 1 30rem; 
+    padding: 2rem;
+    text-align: left; 
+   
+}
+.copyright{
+    font-size: 2.5rem;
+    color:white;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+.foot{
+    background-image: linear-gradient(to bottom, #211302, #49280e);
+}
+
+/* Footer Headings (h2) */
+.foot-box h2 {
+    font-size: 3.5rem;
+    color: #cfb698; 
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+/* Footer Paragraphs */
+.foot-box p {
+    font-size: 2.3rem;
+    color: #eee;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+/* Footer Links */
+.foot-box a {
+    display: block;
+    font-size: 2.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+.foot-box a:hover {
+    color: #cfb698;
+    padding-left: 1rem; 
+}
+.f{
+    margin-top: 10rem;
+}
+/* Icon Container */
+.icon {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.icon i {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: 0.3s;
+}
+.icon i:hover {
+    color: #cfb698;
+    transform: translateY(-5px);
+}
+.icon div i {
+    font-size: 3rem;   
+    color: white;      
+    margin: 0 1rem;    
+    cursor: pointer;
+}
+.icon div i:hover {
+    color:#c6936f; 
+}
+.co{
+    display: block;
+    margin-top:2rem;
+}
+#c1{
+    color: #ecbc0d;
+  } 
+#c2{
+     color: #ecebe6;
+   }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .menu-table thead {
+            display: none; /* Hide the headers on mobile */
+        }
+    
+        .menu-table, .menu-table tbody, .menu-table tr, .menu-table td {
+            display: block;
+            width: 100%;
+        }
+    
+        .menu-table tr {
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+        }
+    
+        .menu-table td {
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+    
+        /* This creates the label on the left side of the mobile "card" */
+        .menu-table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 2rem;
+            width: 45%;
+            font-weight: bold;
+            text-align: left;
+            color: var(--main-color); /* */
+        }
+    }
+    /* Mobile adjustments for the booking form */
+@media (max-width: 768px) {
+    .booking-content {
+        padding: 3rem 2rem;
+    }
+    
+    .booking-form .input-group {
+        flex-direction: column;
+    }
+}
+/* ================= RESPONSIVE FIXES (paste at end of file) ================= */
+
+img { max-width: 100%; }
+body { overflow-x: hidden; }
+
+/* contact box: fixed 800px width broke small screens */
+.contact .content {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ---------- Tablet & below ---------- */
+@media (max-width: 1024px) {
+    /* fixed backgrounds are buggy on phones/tablets */
+    .home, .menu, .about, .booking-section, .contact {
+        background-attachment: scroll;
+    }
+    .home .content h1 { font-size: 4.8rem; }
+    .about .content h1 { font-size: 5rem; }
+    .foot-box { width: auto; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+
+    /* header */
+    .header { padding: 0.5vh 5%; }
+    .header .logo { height: 9vh; width: 9vh; }
+    .header .navbar a { font-size: 2.2rem; margin: 0; }
+    .header .navbar .item { padding: 1.5rem 0; text-align: center; width: 100%; }
+
+    /* home */
+    .home { padding: 0 5%; }
+    .home .content { max-width: 100%; }
+    .home .content h1 { font-size: 3.6rem; }
+    .home .content p { font-size: 2rem; }
+    .btn { padding: 1.5rem 2.5rem; font-size: 2rem; }
+
+    /* menu */
+    .menu { min-height: auto; padding-bottom: 4rem; }
+    .menu .h1 { margin: 9rem 0 3rem 0; font-size: 3rem; }
+    .menu .content-menu { min-height: auto; }
+    .menu .content-menu .row { margin-top: 2rem; }
+    .menu-div { flex: 1 1 100%; padding: 1.5rem; }
+    .menu img { height: 22rem; width: 100%; object-fit: cover; }
+    .menu .content-menu .row .menu-div .name { font-size: 2.2rem; }
+
+    /* about */
+    .about { padding: 10rem 1.5rem 4rem; min-height: auto; }
+    .about .content { margin: 0; padding: 2rem; }
+    .about .content h1 { font-size: 3.8rem; }
+    .about .content h2 { font-size: 1.9rem; }
+    .about .content p { font-size: 2rem; }
+
+    /* table */
+    .table-container { padding: 4rem 5%; }
+    .table-title { font-size: 2.6rem; }
+    .menu-table { font-size: 1.6rem; }
+
+    /* booking form (inputs were stretching tall in column layout) */
+    .booking-section { padding: 6rem 5%; }
+    .booking-content { padding: 3rem 2rem; }
+    .booking-content h1 { font-size: 3rem; }
+    .booking-content p { font-size: 1.7rem; }
+    .booking-form input,
+    .booking-form select {
+        flex: 1 1 auto;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.2rem;
+    }
+
+    /* contact */
+    .contact { padding: 11rem 4% 5rem; }
+    .contact .content { padding: 3rem 2rem; }
+    .contact h1 { font-size: 3.8rem; }
+    .contact h2 { font-size: 2.4rem; }
+    .contact-form input,
+    .contact-form textarea { font-size: 1.7rem; padding: 14px; }
+    .btn-contact { font-size: 1.8rem; padding: 15px 20px; }
+    .social-icons { flex-wrap: wrap; }
+
+    /* footer */
+    .footer { padding: 3rem 5%; gap: 1rem; }
+    .foot-box { width: 100%; margin: 0; padding: 1.5rem; flex: 1 1 100%; }
+    .f { margin-top: 0; }
+    .foot-box h2 { font-size: 2.6rem; }
+    .foot-box p { font-size: 1.8rem; }
+    .foot-box a { font-size: 1.8rem; }
+    .copyright { font-size: 1.6rem; padding: 0 5% 3rem; }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+    .home .content h1 { font-size: 3rem; }
+    .home .content p { font-size: 1.8rem; }
+    .about .content h1 { font-size: 3.2rem; }
+    .contact h1 { font-size: 3.2rem; }
+    .menu img { height: 18rem; }
+    .menu-table td { font-size: 1.5rem; }
+}
+/* ================= UI/UX UPGRADES (paste below the responsive block) ================= */
+
+/* Typed text and emails were being auto-capitalized by the global rule */
+input, textarea, select { text-transform: none; }
+.foot-box .co p { text-transform: none; }
+
+/* Keyboard focus was removed globally, so bring back a visible ring */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, .menu-btn:focus-visible {
+    outline: 3px solid #ecbc0d;
+    outline-offset: 3px;
+}
+
+/* Mobile browsers: 100vh includes the address bar, svh does not */
+.home { min-height: 100vh; min-height: 100svh; }
+
+/* Menu heading was pushed off-center by margin-right */
+.menu .h1 { margin-right: 0; }
+
+/* Menu images: no stretching, consistent size */
+.menu img { width: 100%; object-fit: cover; border-radius: 14px; }
+
+/* Header: readable over any background once you scroll */
+.header { transition: background .3s ease, box-shadow .3s ease; }
+.header.scrolled {
+    background: rgba(19, 19, 26, 0.85);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Highlight the current page in the nav */
+.header .navbar a.current {
+    color: #cfb698;
+    border-bottom: .1rem solid #cfb698;
+    padding-bottom: .5rem;
+}
+
+/* Hover effects only on devices that can hover (no sticky hover on touch) */
+@media (hover: hover) {
+    .menu-div:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+    .menu-table tbody tr:hover { background: #f1e4d3; }
+}
+@media (hover: none) {
+    .btn:hover { letter-spacing: normal; }
+}
+
+/* Table polish */
+.menu-table tbody tr:nth-child(even) { background: #faf5ef; }
+.menu-table td:last-child { font-weight: 700; white-space: nowrap; }
+
+/* Form polish */
+.booking-form input:focus,
+.booking-form select:focus { box-shadow: 0 0 0 3px rgba(236, 188, 13, 0.6); }
+.contact-form textarea { resize: vertical; }
+.contact-form input:invalid:not(:placeholder-shown):not(:focus),
+.contact-form textarea:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #c0392b;
+}
+.form-msg {
+    margin-top: 2rem;
+    padding: 1.4rem 2rem;
+    border-radius: .8rem;
+    background: rgba(58, 143, 92, 0.95);
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
+/* Very large screens: everything uses rem, so scaling the root scales the site */
+@media (min-width: 1600px) {
+    html { font-size: 75%; }
+    .about .content { max-width: 110rem; }
+}
+
+/* Phones in landscape: open menu must not run off the screen */
+@media (max-width: 768px) and (max-height: 500px) {
+    .navbar { max-height: 70vh; overflow-y: auto; }
+    .home { padding-top: 10rem; }
+}
+
+/* Respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+}
